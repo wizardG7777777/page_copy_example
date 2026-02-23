@@ -1,0 +1,128 @@
+.onboarding-layout {
+  min-height: 100vh;
+  background: var(--bg-color);
+}
+
+.ob-header {
+  background: #fff;
+  height: var(--header-height);
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ob-header-container {
+  width: 100%;
+  max-width: 1200px;
+  padding: 0 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.ob-logo {
+  text-decoration: none;
+  color: var(--primary-color);
+  font-size: 22px;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+}
+
+.ob-logout {
+  font-size: 14px;
+  color: #6b7280;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.ob-logout:hover {
+  color: var(--primary-color);
+}
+
+/* Steps indicator */
+.ob-steps {
+  background: #fff;
+  border-bottom: 1px solid var(--border-color);
+  padding: 20px 0;
+  display: flex;
+  justify-content: center;
+}
+
+.ob-steps-container {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  max-width: 700px;
+  width: 100%;
+  padding: 0 24px;
+}
+
+.ob-step {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  white-space: nowrap;
+}
+
+.ob-step-number {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  font-weight: 600;
+  border: 2px solid #d1d5db;
+  color: #9ca3af;
+  background: #fff;
+  flex-shrink: 0;
+  transition: all 0.2s;
+}
+
+.ob-step.active .ob-step-number {
+  border-color: var(--primary-color);
+  background: var(--primary-color);
+  color: #fff;
+}
+
+.ob-step.done .ob-step-number {
+  border-color: var(--success-color);
+  background: var(--success-color);
+  color: #fff;
+}
+
+.ob-step-label {
+  margin-left: 8px;
+  font-size: 14px;
+  color: #9ca3af;
+  font-weight: 500;
+}
+
+.ob-step.active .ob-step-label {
+  color: var(--primary-color);
+  font-weight: 600;
+}
+
+.ob-step.done .ob-step-label {
+  color: var(--success-color);
+}
+
+.ob-step-line {
+  flex: 1;
+  height: 2px;
+  background: #e5e7eb;
+  margin: 0 12px;
+  min-width: 24px;
+}
+
+.ob-step.done .ob-step-line {
+  background: var(--success-color);
+}
+
+.ob-main {
+  max-width: 800px;
+  margin: 32px auto;
+  padding: 0 24px;
+}

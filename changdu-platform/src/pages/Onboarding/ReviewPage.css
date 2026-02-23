@@ -1,0 +1,140 @@
+/* ReviewPage - Application review status display */
+
+.review-page {
+  width: 100%;
+}
+
+.review-card {
+  background: #fff;
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+  padding: 48px 32px;
+  text-align: center;
+}
+
+.review-icon {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 24px;
+  font-size: 36px;
+}
+
+.review-icon.pending {
+  background: rgba(245, 158, 11, 0.1);
+  color: var(--warning-color);
+}
+
+.review-icon.approved {
+  background: rgba(16, 185, 129, 0.1);
+  color: var(--success-color);
+}
+
+.review-icon.rejected {
+  background: rgba(239, 68, 68, 0.1);
+  color: var(--danger-color);
+}
+
+.review-title {
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--text-color);
+  margin-bottom: 12px;
+}
+
+.review-message {
+  font-size: 14px;
+  color: var(--text-secondary);
+  margin-bottom: 8px;
+  line-height: 1.6;
+}
+
+.review-estimate {
+  font-size: 13px;
+  color: var(--text-muted);
+  margin-bottom: 32px;
+}
+
+.review-reason {
+  background: #fef2f2;
+  border: 1px solid #fecaca;
+  border-radius: var(--radius-sm);
+  padding: 12px 16px;
+  margin: 16px auto 32px;
+  max-width: 480px;
+  text-align: left;
+}
+
+.review-reason-label {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--danger-color);
+  margin-bottom: 4px;
+}
+
+.review-reason-text {
+  font-size: 14px;
+  color: #991b1b;
+  line-height: 1.5;
+}
+
+.review-actions {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin-top: 24px;
+}
+
+.review-actions .btn {
+  min-width: 140px;
+  padding: 10px 24px;
+  font-size: 15px;
+}
+
+/* Debug / simulation buttons */
+.review-debug {
+  margin-top: 48px;
+  padding-top: 24px;
+  border-top: 1px dashed var(--border-color);
+}
+
+.review-debug-label {
+  font-size: 12px;
+  color: var(--text-muted);
+  margin-bottom: 12px;
+}
+
+.review-debug-actions {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+}
+
+.review-debug-btn {
+  padding: 6px 16px;
+  font-size: 12px;
+  border-radius: var(--radius-sm);
+  border: 1px dashed var(--border-color);
+  background: #fff;
+  color: var(--text-muted);
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.review-debug-btn:hover {
+  border-color: var(--text-secondary);
+  color: var(--text-secondary);
+}
+
+.review-debug-btn.pass:hover {
+  border-color: var(--success-color);
+  color: var(--success-color);
+}
+
+.review-debug-btn.reject:hover {
+  border-color: var(--danger-color);
+  color: var(--danger-color);
+}

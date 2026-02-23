@@ -1,0 +1,148 @@
+/* Account section styles */
+
+/* Hierarchy / org chart */
+.account-hierarchy {
+  margin-bottom: 24px;
+}
+
+.hierarchy-root {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 16px 20px;
+  background: var(--primary-light);
+  border: 1px solid rgba(59, 130, 246, 0.15);
+  border-radius: var(--radius-md);
+  margin-bottom: 4px;
+}
+
+.hierarchy-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  font-weight: 600;
+  color: #fff;
+  flex-shrink: 0;
+}
+
+.hierarchy-avatar.admin {
+  background: var(--primary-color);
+}
+
+.hierarchy-avatar.manager {
+  background: var(--warning-color);
+}
+
+.hierarchy-avatar.caster {
+  background: var(--success-color);
+}
+
+.hierarchy-info {
+  flex: 1;
+}
+
+.hierarchy-name {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--text-color);
+}
+
+.hierarchy-role {
+  font-size: 13px;
+  color: var(--text-secondary);
+  margin-top: 2px;
+}
+
+.hierarchy-badge {
+  font-size: 12px;
+  color: var(--primary-color);
+  font-weight: 500;
+}
+
+/* Info box */
+.info-box {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 16px 20px;
+  background: rgba(59, 130, 246, 0.04);
+  border: 1px solid rgba(59, 130, 246, 0.12);
+  border-radius: var(--radius-md);
+  margin-bottom: 24px;
+}
+
+.info-box-icon {
+  font-size: 20px;
+  flex-shrink: 0;
+  color: var(--primary-color);
+  line-height: 1.4;
+}
+
+.info-box-content {
+  flex: 1;
+}
+
+.info-box-title {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--primary-color);
+  margin-bottom: 4px;
+}
+
+.info-box-text {
+  font-size: 13px;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+/* Auto-generated password display */
+.password-display {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  background: #f9fafb;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-sm);
+  font-family: 'SF Mono', 'Fira Code', 'Consolas', monospace;
+  font-size: 14px;
+  color: var(--text-color);
+  letter-spacing: 1px;
+}
+
+.password-display-label {
+  font-size: 12px;
+  color: var(--text-muted);
+  margin-top: 4px;
+}
+
+/* Table actions */
+.account-table-actions {
+  display: flex;
+  gap: 8px;
+  flex-wrap: nowrap;
+}
+
+.account-table-actions .btn {
+  white-space: nowrap;
+}
+
+/* Status badge variants */
+.status-active {
+  color: var(--success-color);
+}
+
+.status-inactive {
+  color: var(--text-muted);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hierarchy-root {
+    flex-wrap: wrap;
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "accounts": [
+    {
+      "id": "test-admin-001",
+      "phone": "13800000001",
+      "email": "admin@changdu.test",
+      "password": "test123456",
+      "name": "测试集团管理员",
+      "role": "admin",
+      "roleLabel": "集团账号",
+      "company": "测试科技有限公司",
+      "onboardingStatus": "completed"
+    },
+    {
+      "id": "test-manager-001",
+      "phone": "13800000002",
+      "email": "manager@changdu.test",
+      "password": "test123456",
+      "name": "测试主管",
+      "role": "manager",
+      "roleLabel": "主管账号",
+      "company": "测试科技有限公司",
+      "parentId": "test-admin-001",
+      "onboardingStatus": "completed"
+    },
+    {
+      "id": "test-caster-001",
+      "phone": "13800000003",
+      "email": "caster@changdu.test",
+      "password": "test123456",
+      "name": "测试投手",
+      "role": "caster",
+      "roleLabel": "投手账号",
+      "company": "测试科技有限公司",
+      "parentId": "test-manager-001",
+      "onboardingStatus": "completed"
+    },
+    {
+      "id": "test-new-001",
+      "phone": "13800000004",
+      "email": "new@changdu.test",
+      "password": "test123456",
+      "name": "测试新用户",
+      "role": "admin",
+      "roleLabel": "集团账号",
+      "company": "",
+      "onboardingStatus": "none"
+    }
+  ]
+}

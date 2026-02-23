@@ -1,0 +1,155 @@
+/* Settlement section styles */
+
+/* Bill expanded detail */
+.bill-detail-toggle {
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+.bill-detail-toggle:hover td {
+  background: #f0f6ff;
+}
+
+.bill-expand-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  border-radius: 4px;
+  background: var(--primary-light);
+  color: var(--primary-color);
+  font-size: 12px;
+  margin-right: 8px;
+  transition: transform 0.2s;
+  flex-shrink: 0;
+}
+
+.bill-expand-icon.open {
+  transform: rotate(90deg);
+}
+
+.bill-detail-row {
+  background: #f9fafb;
+}
+
+.bill-detail-row td {
+  padding: 0 !important;
+}
+
+.bill-detail-inner {
+  padding: 16px 20px 16px 48px;
+}
+
+.bill-detail-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.bill-detail-table th {
+  text-align: left;
+  padding: 8px 12px;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--text-muted);
+  border-bottom: 1px solid #eee;
+}
+
+.bill-detail-table td {
+  padding: 8px 12px;
+  font-size: 13px;
+  color: var(--text-color);
+  border-bottom: 1px solid #eee;
+}
+
+.bill-detail-table tr:last-child td {
+  border-bottom: none;
+}
+
+/* Bill amount styling */
+.bill-amount {
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+  color: var(--text-color);
+}
+
+.bill-share-amount {
+  font-weight: 600;
+  color: var(--primary-color);
+  font-variant-numeric: tabular-nums;
+}
+
+/* Stat card with icon */
+.settlement-stat-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  margin-bottom: 12px;
+}
+
+.settlement-stat-icon.balance {
+  background: rgba(16, 185, 129, 0.1);
+}
+
+.settlement-stat-icon.withdrawn {
+  background: rgba(59, 130, 246, 0.1);
+}
+
+.settlement-stat-icon.frozen {
+  background: rgba(245, 158, 11, 0.1);
+}
+
+/* Withdraw order number */
+.withdraw-order-no {
+  font-family: 'SF Mono', 'Fira Code', 'Consolas', monospace;
+  font-size: 13px;
+  color: var(--text-color);
+}
+
+/* Table actions */
+.settlement-table-actions {
+  display: flex;
+  gap: 8px;
+  flex-wrap: nowrap;
+}
+
+.settlement-table-actions .btn {
+  white-space: nowrap;
+}
+
+/* Withdraw amount input wrapper */
+.withdraw-amount-wrapper {
+  position: relative;
+}
+
+.withdraw-amount-wrapper .form-input {
+  padding-left: 24px;
+}
+
+.withdraw-amount-prefix {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--text-secondary);
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.withdraw-max-hint {
+  font-size: 12px;
+  color: var(--text-muted);
+  margin-top: 4px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .bill-detail-inner {
+    padding: 12px;
+    overflow-x: auto;
+  }
+}

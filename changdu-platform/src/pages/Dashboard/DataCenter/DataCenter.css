@@ -1,0 +1,371 @@
+/* DataCenter shared styles */
+
+/* Date picker row */
+.dc-date-picker {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.dc-date-quick-btns {
+  display: flex;
+  gap: 6px;
+}
+
+.dc-date-quick-btn {
+  padding: 6px 14px;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-sm);
+  background: #fff;
+  color: var(--text-secondary);
+  font-size: 13px;
+  cursor: pointer;
+  transition: all 0.15s;
+  white-space: nowrap;
+}
+
+.dc-date-quick-btn:hover {
+  border-color: var(--primary-color);
+  color: var(--primary-color);
+}
+
+.dc-date-quick-btn.active {
+  background: var(--primary-color);
+  color: #fff;
+  border-color: var(--primary-color);
+}
+
+.dc-date-separator {
+  color: var(--text-muted);
+  font-size: 13px;
+}
+
+.dc-date-input {
+  padding: 6px 12px;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-sm);
+  font-size: 13px;
+  background: #fff;
+  color: var(--text-color);
+  width: 140px;
+  transition: border-color 0.15s;
+}
+
+.dc-date-input:focus {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+/* Chart placeholder */
+.dc-chart-container {
+  background: #fff;
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+  padding: 24px;
+  margin-bottom: 24px;
+}
+
+.dc-chart-title {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--text-color);
+  margin-bottom: 20px;
+}
+
+.dc-chart-area {
+  position: relative;
+  height: 280px;
+  background: linear-gradient(180deg, rgba(59, 130, 246, 0.06) 0%, rgba(59, 130, 246, 0.02) 100%);
+  border-radius: var(--radius-sm);
+  border-left: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--border-color);
+  overflow: hidden;
+}
+
+.dc-chart-y-axis {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 8px 0;
+}
+
+.dc-chart-y-label {
+  font-size: 11px;
+  color: var(--text-muted);
+  text-align: right;
+  padding-right: 8px;
+}
+
+.dc-chart-x-axis {
+  position: absolute;
+  left: 50px;
+  right: 0;
+  bottom: 0;
+  height: 28px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding: 0 8px 6px;
+}
+
+.dc-chart-x-label {
+  font-size: 11px;
+  color: var(--text-muted);
+}
+
+.dc-chart-grid-lines {
+  position: absolute;
+  left: 50px;
+  right: 0;
+  top: 8px;
+  bottom: 28px;
+}
+
+.dc-chart-grid-line {
+  border-bottom: 1px dashed #e5e7eb;
+  height: 20%;
+}
+
+.dc-chart-wave {
+  position: absolute;
+  left: 50px;
+  right: 0;
+  top: 8px;
+  bottom: 28px;
+}
+
+.dc-chart-wave-path {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 70%;
+  background: linear-gradient(180deg, rgba(59, 130, 246, 0.15) 0%, rgba(59, 130, 246, 0.03) 100%);
+  clip-path: polygon(
+    0% 60%, 8% 45%, 16% 50%, 24% 30%, 32% 35%,
+    40% 20%, 48% 25%, 56% 15%, 64% 22%, 72% 10%,
+    80% 18%, 88% 8%, 96% 12%, 100% 5%, 100% 100%, 0% 100%
+  );
+}
+
+.dc-chart-wave-line {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 70%;
+  border: none;
+  clip-path: polygon(
+    0% 60%, 8% 45%, 16% 50%, 24% 30%, 32% 35%,
+    40% 20%, 48% 25%, 56% 15%, 64% 22%, 72% 10%,
+    80% 18%, 88% 8%, 96% 12%, 100% 5%, 100% 5.5%,
+    96% 12.5%, 88% 8.5%, 80% 18.5%, 72% 10.5%,
+    64% 22.5%, 56% 15.5%, 48% 25.5%, 40% 20.5%,
+    32% 35.5%, 24% 30.5%, 16% 50.5%, 8% 45.5%, 0% 60.5%
+  );
+  background: var(--primary-color);
+}
+
+/* Table section within DataCenter */
+.dc-table-section {
+  background: #fff;
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+  overflow: hidden;
+}
+
+.dc-table-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 20px;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.dc-table-title {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--text-color);
+}
+
+.dc-table-wrapper {
+  overflow-x: auto;
+}
+
+.dc-table-footer {
+  padding: 12px 20px;
+  border-top: 1px solid var(--border-color);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 13px;
+  color: var(--text-secondary);
+}
+
+/* Summary row */
+.dc-summary-row td {
+  font-weight: 600;
+  background: #f9fafb !important;
+  color: var(--text-color);
+}
+
+/* Expanded row for UserStats */
+.dc-expandable-row {
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+.dc-expandable-row:hover td {
+  background: #f0f6ff;
+}
+
+.dc-expand-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  border-radius: 4px;
+  background: var(--primary-light);
+  color: var(--primary-color);
+  font-size: 12px;
+  margin-right: 8px;
+  transition: transform 0.2s;
+  flex-shrink: 0;
+}
+
+.dc-expand-icon.open {
+  transform: rotate(90deg);
+}
+
+.dc-expanded-content {
+  background: #f9fafb;
+}
+
+.dc-expanded-content td {
+  padding: 0 !important;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.dc-expanded-inner {
+  padding: 16px 20px 16px 48px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.dc-expanded-section-title {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-secondary);
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.dc-expanded-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.dc-expanded-list li {
+  padding: 6px 0;
+  font-size: 13px;
+  color: var(--text-color);
+  border-bottom: 1px solid #eee;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.dc-expanded-list li:last-child {
+  border-bottom: none;
+}
+
+.dc-expanded-list-meta {
+  font-size: 12px;
+  color: var(--text-muted);
+}
+
+/* Filter bar extensions for DataCenter */
+.dc-filter-bar {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.dc-filter-bar .form-input,
+.dc-filter-bar .form-select {
+  width: auto;
+  min-width: 150px;
+  padding: 6px 12px;
+  font-size: 13px;
+}
+
+.dc-filter-bar .btn {
+  padding: 6px 14px;
+  font-size: 13px;
+}
+
+/* Export button style */
+.dc-export-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 16px;
+  background: #fff;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-sm);
+  font-size: 13px;
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition: all 0.15s;
+}
+
+.dc-export-btn:hover {
+  border-color: var(--primary-color);
+  color: var(--primary-color);
+}
+
+/* Pagination info */
+.dc-pagination-info {
+  font-size: 13px;
+  color: var(--text-muted);
+}
+
+/* Text alignment helpers */
+.text-right {
+  text-align: right;
+}
+
+.text-center {
+  text-align: center;
+}
+
+/* Money value styling */
+.dc-money {
+  font-weight: 500;
+  font-variant-numeric: tabular-nums;
+}
+
+/* ROI styling */
+.dc-roi-positive {
+  color: var(--success-color);
+  font-weight: 500;
+}
+
+.dc-roi-negative {
+  color: var(--danger-color);
+  font-weight: 500;
+}
